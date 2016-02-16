@@ -46,6 +46,7 @@
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="CRIE SUA CHAVE DA API EM https://console.developers.google.com/ PARA QUE O GOOGLE MAPS FUNCIONE"
             />
+
         <meta-data
             android:name="android.app.default_searchable"
             android:value=".MainActivity"
@@ -68,6 +69,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="CRIE SUA CONTA NO https://www.fabric.io/ OU REMOVA TrackerUtils.java E SUAS REFERENCIAS"
+            />
+
     </application>
+
 
 </manifest>

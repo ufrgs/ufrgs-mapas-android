@@ -34,6 +34,7 @@ import java.util.List;
 
 import br.ufrgs.ufrgsmapas.R;
 import br.ufrgs.ufrgsmapas.models.LocationModel;
+import br.ufrgs.ufrgsmapas.utils.TrackerUtils;
 
 /**
  * All the configuration required by the NavigationView
@@ -123,6 +124,7 @@ public class SidebarView {
      * Opens the drawer
      */
     public void openMenu() {
+        TrackerUtils.menuOpen();
         mDrawer.openDrawer();
     }
 
@@ -195,24 +197,28 @@ public class SidebarView {
     };
 
     private void clickedSatteliteMap() {
+        TrackerUtils.satteliteSwitch();
         for(SidebarViewEvents s: mSidebarViewEventsList){
             s.sidebarClickSatelliteMap();
         }
     }
 
     private void clickedNormalMap() {
+        TrackerUtils.normalMapSwitch();
         for(SidebarViewEvents s: mSidebarViewEventsList){
             s.sidebarClickNormalMap();
         }
     }
 
     private void clickedFavorites() {
+        TrackerUtils.favoritesMap();
         for(SidebarViewEvents s: mSidebarViewEventsList){
             s.sidebarClickFavorites();
         }
     }
 
     private void clickedAllBuildings() {
+        TrackerUtils.allBuildingsMap();
         for (SidebarViewEvents s : mSidebarViewEventsList) {
             s.sidebarClickAllBuildings();
         }

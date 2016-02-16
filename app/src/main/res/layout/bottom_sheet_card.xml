@@ -109,7 +109,8 @@
             android:background="@android:color/transparent"
             android:cropToPadding="false"
             android:layout_marginRight="16dp"
-            android:scaleType="fitCenter" />
+            android:scaleType="fitCenter"
+            android:visibility="gone"/>
 
         <ImageButton
             android:id="@+id/locationButton"

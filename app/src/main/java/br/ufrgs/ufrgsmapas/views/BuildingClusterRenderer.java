@@ -108,7 +108,7 @@ public class BuildingClusterRenderer extends DefaultClusterRenderer<MapPositionV
         markerOptions.icon(descriptor);
     }
 
-    private int getColor(int clusterSize) {
+    protected int getColor(int clusterSize) {
         return ContextCompat.getColor(mContext, R.color.blue900);
     }
 

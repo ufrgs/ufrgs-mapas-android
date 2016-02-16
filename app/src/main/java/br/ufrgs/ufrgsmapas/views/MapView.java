@@ -38,6 +38,7 @@ import br.ufrgs.ufrgsmapas.activities.MainActivity;
 import br.ufrgs.ufrgsmapas.libs.NonHierarchicalDistanceBasedAlgorithm;
 import br.ufrgs.ufrgsmapas.utils.DebugUtils;
 import br.ufrgs.ufrgsmapas.utils.MeasureUtils;
+import br.ufrgs.ufrgsmapas.utils.TrackerUtils;
 import br.ufrgs.ufrgsmapas.vos.BuildingVo;
 import br.ufrgs.ufrgsmapas.vos.MapPositionVo;
 
@@ -232,6 +233,7 @@ public class MapView implements ClusterManager.OnClusterItemClickListener<MapPos
     @Override
     public boolean onClusterItemClick(MapPositionVo mapPositionVo) {
         mView.selectItem(mapPositionVo);
+        TrackerUtils.pinClick(mapPositionVo.id);
         return true;
     }
 

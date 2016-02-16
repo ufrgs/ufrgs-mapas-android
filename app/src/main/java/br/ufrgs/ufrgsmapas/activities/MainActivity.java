@@ -32,6 +32,7 @@ import br.ufrgs.ufrgsmapas.R;
 import br.ufrgs.ufrgsmapas.models.BuildingModel;
 import br.ufrgs.ufrgsmapas.models.LocationModel;
 import br.ufrgs.ufrgsmapas.utils.DebugUtils;
+import br.ufrgs.ufrgsmapas.utils.TrackerUtils;
 import br.ufrgs.ufrgsmapas.views.MainView;
 import br.ufrgs.ufrgsmapas.vos.BuildingVo;
 import br.ufrgs.ufrgsmapas.vos.MapPositionVo;
@@ -224,6 +225,7 @@ public class MainActivity extends AppCompatActivity{
 
     public void setStarred(BuildingVo buildingVo, boolean starred) {
         mBuildingModel.setStarred(buildingVo.id, starred);
+        TrackerUtils.buildingStar(buildingVo.ufrgsBuildingCode, starred);
         buildingVo.isStarred = starred;
     }
 
@@ -232,6 +234,7 @@ public class MainActivity extends AppCompatActivity{
      * @param buildingVo Building with the coordinates to be handled
      */
     public void openDirections(BuildingVo buildingVo) {
+        TrackerUtils.externalNavigation();
         Intent intent = new Intent(Intent.ACTION_VIEW,
                 Uri.parse("http://maps.google.com/maps?daddr=" + buildingVo.latitude
                         + "," +buildingVo.longitude));

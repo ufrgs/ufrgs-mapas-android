@@ -23,6 +23,9 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.crashlytics.android.Crashlytics;
+import com.crashlytics.android.answers.Answers;
+import io.fabric.sdk.android.Fabric;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -45,6 +48,9 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        // Starts fabric
+        Fabric.with(this, new Answers(), new Crashlytics());
 
         // We will check if the user has the database here. If it is not created, we will copy the
         // database from the assets folder to the database folder

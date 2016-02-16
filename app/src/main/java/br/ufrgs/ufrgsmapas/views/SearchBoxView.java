@@ -30,6 +30,7 @@ import br.ufrgs.ufrgsmapas.R;
 import br.ufrgs.ufrgsmapas.activities.MainActivity;
 import br.ufrgs.ufrgsmapas.libs.SearchBox;
 import br.ufrgs.ufrgsmapas.utils.DebugUtils;
+import br.ufrgs.ufrgsmapas.utils.TrackerUtils;
 
 /**
  * Handles the SearchBox
@@ -134,6 +135,7 @@ public class SearchBoxView implements MainActivity.ActivityResult{
                 String buildingId = mSearchResultsMap.get(searchTerm);
 
                 if (DebugUtils.DEBUG) Log.d(TAG, "onSearch " + searchTerm + " : " + buildingId);
+                TrackerUtils.searchQuery(searchTerm);
 
                 if (buildingId != null) { //TODO Call mainView to open the search result
                     mView.newSearchResult(buildingId);
@@ -195,6 +197,7 @@ public class SearchBoxView implements MainActivity.ActivityResult{
             ArrayList<String> firstResult = new ArrayList<>();
             firstResult.add(matches.get(0));
             mSearchBox.populateEditText(firstResult);
+            TrackerUtils.voiceAction();
             openSearch();
         }
     }
