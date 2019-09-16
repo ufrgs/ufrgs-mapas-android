@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="16dp"
+    android:gravity="left"
+    >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/darkBlue"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prédio "
+                />
+
+            <TextView
+                android:id="@+id/snippet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="212121"
+                android:maxLines="1"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="CPD - predio de computacao"
+            android:maxLines="2"
+            android:textColor="@color/md_grey_800"
+            android:textSize="16dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

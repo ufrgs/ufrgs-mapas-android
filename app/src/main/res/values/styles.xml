@@ -1,30 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-   - Copyright 2016 Universidade Federal do Rio Grande do Sul
-   -
-   - Licensed under the Apache License, Version 2.0 (the "License");
-   - you may not use this file except in compliance with the License.
-   - You may obtain a copy of the License at
-   -
-   -     http://www.apache.org/licenses/LICENSE-2.0
-   -
-   - Unless required by applicable law or agreed to in writing, software
-   - distributed under the License is distributed on an "AS IS" BASIS,
-   - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   - See the License for the specific language governing permissions and
-   - limitations under the License.
-   -->
 <resources>
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
 
-        <item name="windowActionBar">false</item>
-        <item name="windowActionModeOverlay">true</item>
+    <style name="IntroTheme" parent="AppTheme" >
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+    </style>
 
+    <style name="Theme.Transparent" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#333</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#333</item>
     </style>
 
 </resources>

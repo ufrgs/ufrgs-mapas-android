@@ -1,19 +1,27 @@
 <resources>
-    <!--
-   - Copyright 2016 Universidade Federal do Rio Grande do Sul
-   -
-   - Licensed under the Apache License, Version 2.0 (the "License");
-   - you may not use this file except in compliance with the License.
-   - You may obtain a copy of the License at
-   -
-   -     http://www.apache.org/licenses/LICENSE-2.0
-   -
-   - Unless required by applicable law or agreed to in writing, software
-   - distributed under the License is distributed on an "AS IS" BASIS,
-   - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   - See the License for the specific language governing permissions and
-   - limitations under the License.
-   -->
     <string name="app_name">UFRGS Mapas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--strings for the tutorial-->
+    <string name="intro_btn_skip">Pular</string>
+    <string name="intro_btn_next">Próximo</string>
+    <string name="intro_ok">Entendi</string>
+    <string name="intro1_title">Pesquisar prédios</string>
+    <string name="intro1_text">A pesquisa dos prédios pode ser feita por nome, departamento ou campi.</string>
+    <string name="intro2_title">Ativação do GPS</string>
+    <string name="intro2_text">A ativação do GPS pode ser feita para facilitar a pesquisa de prédios próximos.</string>
+    <string name="intro3_title">Acessar Google Maps</string>
+    <string name="intro3_text">Durante a pesquisa o Google Maps pode ser acessado diretamente para verificar o melhor trajeto.</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false"></string>
+
+    <string name="onboarding_tag">FIRST_RUN</string>
+    <string name="privacy_policy_tag">PRIVACY_POLICE</string>
+    <string name="has_fetched_items">HAS_FETCHED</string>
+
+    <string name="privacy_policy_message">Ao utilizar o app você concorda com as nossas <a href="https://www.ufrgs.br/cpd/apps-politica-de-privacidade/">Políticas de privacidade</a>.</string>
+    <string name="privacy_policy_response">Estou ciente</string>
 
 </resources>
